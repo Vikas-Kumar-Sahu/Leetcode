@@ -1,2 +1,2 @@
 # Leetcode
-improve my problem skill in with the help of leetcode
+improve my problem skill with the help of leetcode.
