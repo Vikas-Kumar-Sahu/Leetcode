@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        // initilize the value
+        int sum = 0;            
+        int maxi = nums[0];
+        
+        // running a loop in whole array index
+        for(int i = 0; i < nums.size(); i++){
+            // adding the all array element in sum variable.
+            sum = sum + nums[i];
+            
+            // checking the max value in each index.
+            maxi = max(maxi, sum);
+            
+            // negative value is garbage for this Qn.
+            if(sum < 0)
+                // upadate the sum value if they found garbage value
+                sum = 0;
+        }
+        // return the final maximum subarray output.
+        return maxi;
+    }
+};
